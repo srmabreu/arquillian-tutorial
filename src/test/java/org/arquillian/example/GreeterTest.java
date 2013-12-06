@@ -17,6 +17,7 @@ public class GreeterTest {
 	@Deployment
 	public static JavaArchive createDeployment() {
 		return ShrinkWrap.create(JavaArchive.class).addClass(Greeter.class)
+				.addPackage("org.apache.deltaspike.core.impl.scope.window")
 				.addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
 	}
 	
